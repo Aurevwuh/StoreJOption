@@ -68,13 +68,16 @@ public class StoreToAnotherDimension {
 
             } else {
                 System.out.println("--------------------------------------------------");
-                System.out.print("[SYSTEM]: Enter cash payment: ");
+                System.out.println("[SYSTEM]: Total price:" + "$" + x2);
+                System.out.println("--------------------------------------------------");
+                System.out.print("[SYSTEM]: Enter cash payment: " + "$");
                 x_2 = input.nextDouble();
                 if (x_2 >= x2) {
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("[SYSTEM]: Total Price: " + "$" + x2);
                     x2 = x_2 - x2;
                     System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
+                    System.out.println("[SYSTEM]: Total Change: " + "$" + x2);
                     System.out.println("--------------------------------------------------");
                     System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                     x3 = input.nextInt();
@@ -94,17 +97,20 @@ public class StoreToAnotherDimension {
                     x4 = input.nextInt();
 
                     if (x4 == 1) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.print("$:");
                         x5 = input.nextDouble();
                         x5 = x5 + x_2;
                     }
                     if (x5 >= x2) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: Payment successful, cash is sufficient");
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Price: " + x5);
+                        System.out.println("[SYSTEM]: Total Price: " + "$" + x5);
                         x5 = x5 - x2;
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Change: " + x5);
+                        System.out.println("[SYSTEM]: Total Change: " + "$" + x5);
                         System.out.println("--------------------------------------------------");
                         System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                         x3 = input.nextInt();
@@ -119,21 +125,11 @@ public class StoreToAnotherDimension {
                         System.out.println("The store owner kicked the customer out of the store");
                     }
 
-                } else {
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
-                    x2 = x_2 - x2;
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
-                    x3 = input.nextInt();
-
                     if (x3 == 1) {
                         order();
                     } else if (x3 == 2) {
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[CASHIER]: Great, time to rest and chill");
+                        System.out.println("[STORE CLERK]: Lets go get some beer!");
                     }
                 }
             }
@@ -164,13 +160,16 @@ public class StoreToAnotherDimension {
 
             } else {
                 System.out.println("--------------------------------------------------");
-                System.out.print("[SYSTEM]: Enter cash payment: ");
+                System.out.println("[SYSTEM]: Total price:" + "$" + x2);
+                System.out.println("--------------------------------------------------");
+                System.out.print("[SYSTEM]: Enter cash payment: " + "$");
                 x_2 = input.nextDouble();
                 if (x_2 >= x2) {
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("[SYSTEM]: Total Price: " + "$" + x2);
                     x2 = x_2 - x2;
                     System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
+                    System.out.println("[SYSTEM]: Total Change: " + "$" + x2);
                     System.out.println("--------------------------------------------------");
                     System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                     x3 = input.nextInt();
@@ -190,17 +189,20 @@ public class StoreToAnotherDimension {
                     x4 = input.nextInt();
 
                     if (x4 == 1) {
-                        System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.println("--------------------------------------------------");
+                       System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.print("$:");
                         x5 = input.nextDouble();
                         x5 = x5 + x_2;
                     }
                     if (x5 >= x2) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: Payment successful, cash is sufficient");
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Price: " + x5);
+                        System.out.println("[SYSTEM]: Total Price: " + "$" + x5);
                         x5 = x5 - x2;
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Change: " + x5);
+                        System.out.println("[SYSTEM]: Total Change: " + "$" + x5);
                         System.out.println("--------------------------------------------------");
                         System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                         x3 = input.nextInt();
@@ -215,21 +217,11 @@ public class StoreToAnotherDimension {
                         System.out.println("The store owner kicked the customer out of the store");
                     }
 
-                } else {
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
-                    x2 = x_2 - x2;
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
-                    x3 = input.nextInt();
-
                     if (x3 == 1) {
                         order();
                     } else if (x3 == 2) {
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[CASHIER]: Great, time to rest and chill");
+                        System.out.println("[STORE CLERK]: Lets go get some beer!");
                     }
                 }
             }
@@ -261,13 +253,16 @@ public class StoreToAnotherDimension {
 
             } else {
                 System.out.println("--------------------------------------------------");
-                System.out.print("[SYSTEM]: Enter cash payment: ");
+                System.out.println("[SYSTEM]: Total price:" + "$" + x2);
+                System.out.println("--------------------------------------------------");
+                System.out.print("[SYSTEM]: Enter cash payment: " + "$");
                 x_2 = input.nextDouble();
                 if (x_2 >= x2) {
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("[SYSTEM]: Total Price: " + "$" + x2);
                     x2 = x_2 - x2;
                     System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
+                    System.out.println("[SYSTEM]: Total Change: " + "$" + x2);
                     System.out.println("--------------------------------------------------");
                     System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                     x3 = input.nextInt();
@@ -287,17 +282,20 @@ public class StoreToAnotherDimension {
                     x4 = input.nextInt();
 
                     if (x4 == 1) {
-                        System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.println("--------------------------------------------------");
+                       System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.print("$:");
                         x5 = input.nextDouble();
                         x5 = x5 + x_2;
                     }
                     if (x5 >= x2) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: Payment successful, cash is sufficient");
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Price: " + x5);
+                        System.out.println("[SYSTEM]: Total Price: " + "$" + x5);
                         x5 = x5 - x2;
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Change: " + x5);
+                        System.out.println("[SYSTEM]: Total Change: " + "$" + x5);
                         System.out.println("--------------------------------------------------");
                         System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                         x3 = input.nextInt();
@@ -312,21 +310,11 @@ public class StoreToAnotherDimension {
                         System.out.println("The store owner kicked the customer out of the store");
                     }
 
-                } else {
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
-                    x2 = x_2 - x2;
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
-                    x3 = input.nextInt();
-
                     if (x3 == 1) {
                         order();
                     } else if (x3 == 2) {
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[CASHIER]: Great, time to rest and chill");
+                        System.out.println("[STORE CLERK]: Lets go get some beer!");
                     }
                 }
 
@@ -358,13 +346,16 @@ public class StoreToAnotherDimension {
 
             } else {
                 System.out.println("--------------------------------------------------");
-                System.out.print("[SYSTEM]: Enter cash payment: ");
+                System.out.println("[SYSTEM]: Total price:" + "$" + x2);
+                System.out.println("--------------------------------------------------");
+                System.out.print("[SYSTEM]: Enter cash payment: " + "$");
                 x_2 = input.nextDouble();
                 if (x_2 >= x2) {
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("[SYSTEM]: Total Price: " + "$" + x2);
                     x2 = x_2 - x2;
                     System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
+                    System.out.println("[SYSTEM]: Total Change: " + "$" + x2);
                     System.out.println("--------------------------------------------------");
                     System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                     x3 = input.nextInt();
@@ -384,17 +375,20 @@ public class StoreToAnotherDimension {
                     x4 = input.nextInt();
 
                     if (x4 == 1) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.print("$:");
                         x5 = input.nextDouble();
                         x5 = x5 + x_2;
                     }
                     if (x5 >= x2) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: Payment successful, cash is sufficient");
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Price: " + x5);
+                        System.out.println("[SYSTEM]: Total Price: " + "$" + x5);
                         x5 = x5 - x2;
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Change: " + x5);
+                        System.out.println("[SYSTEM]: Total Change: " + "$" + x5);
                         System.out.println("--------------------------------------------------");
                         System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                         x3 = input.nextInt();
@@ -409,21 +403,11 @@ public class StoreToAnotherDimension {
                         System.out.println("The store owner kicked the customer out of the store");
                     }
 
-                } else {
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
-                    x2 = x_2 - x2;
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
-                    x3 = input.nextInt();
-
                     if (x3 == 1) {
                         order();
                     } else if (x3 == 2) {
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[CASHIER]: Great, time to rest and chill");
+                        System.out.println("[STORE CLERK]: Lets go get some beer!");
                     }
                 }
             }
@@ -455,13 +439,16 @@ public class StoreToAnotherDimension {
 
             } else {
                 System.out.println("--------------------------------------------------");
-                System.out.print("[SYSTEM]: Enter cash payment: ");
+                System.out.println("[SYSTEM]: Total price:" + "$" + x2);
+                System.out.println("--------------------------------------------------");
+                System.out.print("[SYSTEM]: Enter cash payment: " + "$");
                 x_2 = input.nextDouble();
                 if (x_2 >= x2) {
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
+                    System.out.println("--------------------------------------------------");
+                    System.out.println("[SYSTEM]: Total Price: " + "$" + x2);
                     x2 = x_2 - x2;
                     System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
+                    System.out.println("[SYSTEM]: Total Change: " + "$" + x2);
                     System.out.println("--------------------------------------------------");
                     System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                     x3 = input.nextInt();
@@ -481,17 +468,20 @@ public class StoreToAnotherDimension {
                     x4 = input.nextInt();
 
                     if (x4 == 1) {
-                        System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.println("--------------------------------------------------");
+                         System.out.println("[SYSTEM]: How much do you wanna add?");
+                        System.out.print("$:");
                         x5 = input.nextDouble();
                         x5 = x5 + x_2;
                     }
                     if (x5 >= x2) {
+                        System.out.println("--------------------------------------------------");
                         System.out.println("[SYSTEM]: Payment successful, cash is sufficient");
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Price: " + x5);
+                        System.out.println("[SYSTEM]: Total Price: " + "$" + x5);
                         x5 = x5 - x2;
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[SYSTEM]: Total Change: " + x5);
+                        System.out.println("[SYSTEM]: Total Change: " + "$" + x5);
                         System.out.println("--------------------------------------------------");
                         System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
                         x3 = input.nextInt();
@@ -506,21 +496,11 @@ public class StoreToAnotherDimension {
                         System.out.println("The store owner kicked the customer out of the store");
                     }
 
-                } else {
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Price: " + x2);
-                    x2 = x_2 - x2;
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[SYSTEM]: Total Change: " + x2);
-                    System.out.println("--------------------------------------------------");
-                    System.out.println("[CASHIER]: Next customer please, press [1] to proceed otherwise press [2]");
-                    x3 = input.nextInt();
-
                     if (x3 == 1) {
                         order();
                     } else if (x3 == 2) {
                         System.out.println("--------------------------------------------------");
-                        System.out.println("[CASHIER]: Great, time to rest and chill");
+                        System.out.println("[STORE CLERK]: Lets go get some beer!");
                     }
                 }
             }

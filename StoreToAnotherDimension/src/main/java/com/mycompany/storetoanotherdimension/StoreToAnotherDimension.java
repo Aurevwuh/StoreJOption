@@ -11,10 +11,10 @@ import javax.sound.midi.Soundbank;
  *
  * @author ADMIN
  */
-ublic class StoreJOp {
-        public static String again, pick, how_many, which, payment;
+public class Kji {
+public static String again, pick, how_many, which, payment;
     public static int discount = 1, one, two;
-    public static int choose, quantity = 1;
+    public static int choose, quantity = 1, x;
     public static double total = 0, pay;
     public static float type;
 
@@ -24,91 +24,6 @@ ublic class StoreJOp {
         JOptionPane.showMessageDialog(null, "PROMO \n $ 10000 or more, get 1 set of paraphernalia tools \n $ 20000 or more, get 1 set of paraphernalia and 1 box of Flakka Drugs \n NOTE: You can only get Flakka Drugs when you avail on our promo \n +You can avail both promos at the same time+");
 
         JOptionPane.showMessageDialog(null, "DISCOUNTS \n D1 - Membership discount ( 10% off ) \n D2 - First purchase discount ( 5% off )");
-    }
-
-    public static void list1() {
-        switch (choose) {
-            case 1:
-                System.out.println(quantity + "SHABU");
-            case 2:
-                System.out.println(quantity + "MARIJUANA");
-            case 3:
-                System.out.println(quantity + "COCAINE");
-            case 4:
-                System.out.println(quantity + "RUGBY");
-            case 5:
-                System.out.println(quantity + "VULCA");
-            default: {
-            }
-        }
-    }
-
-    public static void list2() {
-        switch (choose) {
-            case 1:
-                System.out.println(quantity + "SHABU");
-            case 2:
-                System.out.println(quantity + "MARIJUANA");
-            case 3:
-                System.out.println(quantity + "COCAINE");
-            case 4:
-                System.out.println(quantity + "RUGBY");
-            case 5:
-                System.out.println(quantity + "VULCA");
-            default: {
-            }
-        }
-    }
-
-    public static void list3() {
-        switch (choose) {
-            case 1:
-                System.out.println(quantity + "SHABU");
-            case 2:
-                System.out.println(quantity + "MARIJUANA");
-            case 3:
-                System.out.println(quantity + "COCAINE");
-            case 4:
-                System.out.println(quantity + "RUGBY");
-            case 5:
-                System.out.println(quantity + "VULCA");
-            default: {
-            }
-        }
-    }
-
-    public static void list4() {
-        switch (choose) {
-            case 1:
-                System.out.println(quantity + "SHABU");
-            case 2:
-                System.out.println(quantity + "MARIJUANA");
-            case 3:
-                System.out.println(quantity + "COCAINE");
-            case 4:
-                System.out.println(quantity + "RUGBY");
-            case 5:
-                System.out.println(quantity + "VULCA");
-            default: {
-            }
-        }
-    }
-
-    public static void list5() {
-        switch (choose) {
-            case 1:
-                System.out.println(quantity + "SHABU");
-            case 2:
-                System.out.println(quantity + "MARIJUANA");
-            case 3:
-                System.out.println(quantity + "COCAINE");
-            case 4:
-                System.out.println(quantity + "RUGBY");
-            case 5:
-                System.out.println(quantity + "VULCA");
-            default: {
-            }
-        }
     }
 
     public static void order() {
@@ -171,7 +86,7 @@ ublic class StoreJOp {
 
         pick = JOptionPane.showInputDialog("DO YOU WANNA BUY MORE? \n Enter [1] if Yes and [2] if No: ");
         choose = Integer.parseInt(pick);
-        if (one == 1) {
+        if (choose == 1) {
             order();
         }
         pick = JOptionPane.showInputDialog("TOTAL PRICE IS $" + total + "\n" + "Discounts Available: \n Discount 1 - Membership Discount ( 10% off ) \n Discount 2 - First Purchase Discount ( 5% off ) \n *Note: 1 discount can only be applied* \n Press [3] if none \n Enter discount number: ");
@@ -194,8 +109,8 @@ ublic class StoreJOp {
         }
 
         payment = JOptionPane.showInputDialog("TOTAL PRICE IS $ " + total + "\n" + "Enter Cash: ");
-        choose = Integer.parseInt(payment);
-        switch (choose) {
+        x = Integer.parseInt(payment);
+        switch (x) {
 
             case 1:
                 do {
@@ -204,19 +119,23 @@ ublic class StoreJOp {
                     }
                 } while (pay < total);
                 break;
-        }
-        if (pay >= total) {
-                    total = pay - total;
-        }                 
-         JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + total);
+       
+        case 2:
+      if (pay >= total) {
+                    JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + total);
+                  total = pay - total;
+      }           
+            break;
+        }   
+   
         JOptionPane.showMessageDialog(null, "PURCHASE COMPLETE!!!");
-        pick = JOptionPane.showInputDialog("DO YOU WANNA BUY AGAIN? \n Enter [1] if Yes and [2] if No: ");
+        pick = JOptionPane.showInputDialog("NEXT CUSTOMER? \n Enter [1] if Yes and [2] if No: ");
         choose = Integer.parseInt(pick);
         switch (choose) {
 
             case 1:
                 total = total - total;
-                GOODSHEESH();
+                order();
                 break;
 
             case 2:
@@ -225,7 +144,7 @@ ublic class StoreJOp {
                 break;
         }
     }
-
+    
     public static void main(String[] args) {
         GOODSHEESH();
         order();

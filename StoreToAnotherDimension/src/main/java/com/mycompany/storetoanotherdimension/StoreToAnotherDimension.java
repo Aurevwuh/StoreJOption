@@ -12,22 +12,24 @@ import javax.sound.midi.Soundbank;
  * @author ADMIN
  */
 public class Kji {
-public static String again, pick, how_many, which, payment;
+ public static String again, pick, how_many, which, payment;
     public static int discount = 1, one, two;
     public static int choose, quantity = 1, x;
-    public static double total = 0, pay;
+    public static double total = 0, pay,change;
     public static float type;
 
     public static void GOODSHEESH() {
-        JOptionPane.showMessageDialog(null, "1. SHABU - $5000 \n 2. MARIJUANA - $2000 \n 3. COCAINE - $3000 \n 4. RUGBY - $50 \n 5. VULCA SEAL - $150");
+        JOptionPane.showMessageDialog(null, "OPENING STORE...");
+        
+        JOptionPane.showMessageDialog(null, "WELCOME MAH BRO, CHECK OUT WHAT WE HAVE");
 
-        JOptionPane.showMessageDialog(null, "PROMO \n $ 10000 or more, get 1 set of paraphernalia tools \n $ 20000 or more, get 1 set of paraphernalia and 1 box of Flakka Drugs \n NOTE: You can only get Flakka Drugs when you avail on our promo \n +You can avail both promos at the same time+");
+        JOptionPane.showMessageDialog(null, "{========================PROMOS========================} \n $ 10000 or more, get 1 set of paraphernalia tools \n $ 20000 or more, get 1 set of paraphernalia and 1 box of Flakka Drugs \n NOTE: You can only get Flakka Drugs when you avail on our promo \n *You can avail both promos at the same time*");
 
-        JOptionPane.showMessageDialog(null, "DISCOUNTS \n D1 - Membership discount ( 10% off ) \n D2 - First purchase discount ( 5% off )");
+        JOptionPane.showMessageDialog(null, "{======DISCOUNTS======} \n D1 - Membership discount ( 10% off ) \n D2 - First purchase discount ( 5% off )");
     }
 
     public static void order() {
-        pick = JOptionPane.showInputDialog("1. SHABU       $. 5000 \n 2. MARIJUANA        $. 2000 \n 3. COCAINE      $. 3000 \n 4. RUGBY           $. 50 \n 5. VULCA SEAL   $. 150 \n Enter 6: EXIT SHOP \n WHAT IS YOUR ORDER?: ");
+        pick = JOptionPane.showInputDialog("{======AVAILABLE ITEMS======} \n 1. SHABU              $5000 \n 2. MARIJUANA    $2000 \n 3. COCAINE          $3000 \n 4. RUGBY              $50 \n 5. VULCA SEAL   $150 \n Input [6]: EXIT SHOP \n WHAT IS YOUR ORDER?: ");
         choose = Integer.parseInt(pick);
 
         switch (choose) {
@@ -43,32 +45,32 @@ public static String again, pick, how_many, which, payment;
                 JOptionPane.showMessageDialog(null, "You chose MARIJUANA");
                 how_many = JOptionPane.showInputDialog("HOW MANY?: ");
                 type = Float.parseFloat(how_many);
-                total = total + (quantity * 2000);
+                total = total + (type * 2000);
                 break;
 
             case 3:
                 JOptionPane.showMessageDialog(null, "You chose COCAINE");
                 how_many = JOptionPane.showInputDialog("HOW MANY?: ");
                 type = Float.parseFloat(how_many);
-                total = total + (quantity * 3000);
+                total = total + (type * 3000);
                 break;
 
             case 4:
                 JOptionPane.showMessageDialog(null, "You chose RUGBY");
                 how_many = JOptionPane.showInputDialog("HOW MANY?: ");
                 type = Float.parseFloat(how_many);
-                total = total + (quantity * 50);
+                total = total + (type * 50);
                 break;
 
             case 5:
                 JOptionPane.showMessageDialog(null, "You chose VULCA SEAL");
                 how_many = JOptionPane.showInputDialog("HOW MANY?: ");
                 type = Float.parseFloat(how_many);
-                total = total + (quantity * 150);
+                total = total + (type * 150);
                 break;
 
             case 6:
-                JOptionPane.showMessageDialog(null, "Ka mahal, uli nalang ko :)");
+                JOptionPane.showMessageDialog(null, "Ka mahal, uli nalang ko");
                 System.exit(0);
 
             default:
@@ -89,7 +91,7 @@ public static String again, pick, how_many, which, payment;
         if (choose == 1) {
             order();
         }
-        pick = JOptionPane.showInputDialog("TOTAL PRICE IS $" + total + "\n" + "Discounts Available: \n Discount 1 - Membership Discount ( 10% off ) \n Discount 2 - First Purchase Discount ( 5% off ) \n *Note: 1 discount can only be applied* \n Press [3] if none \n Enter discount number: ");
+        pick = JOptionPane.showInputDialog("{======TOTAL PRICE IS $" + total + "======} \n" + "Discounts Available: \n Discount 1 - Membership Discount ( 10% off ) \n Discount 2 - First Purchase Discount ( 5% off )\n Press [3] if none \n *Note: 1 discount can only be applied*  \n Enter discount number: ");
         choose = Integer.parseInt(pick);
         switch (choose) {
 
@@ -102,7 +104,7 @@ public static String again, pick, how_many, which, payment;
                 break;
 
             case 3:
-                JOptionPane.showMessageDialog(null, "No discount");
+                JOptionPane.showMessageDialog(null, "NO DISCOUNT");
                 total = total - 0;
                 break;
 
@@ -122,12 +124,12 @@ public static String again, pick, how_many, which, payment;
        
         case 2:
       if (pay >= total) {
-                    JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + total);
-                  total = pay - total;
+                    JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + change);
+                  change = pay - total;
+                  
       }           
             break;
-        }   
-   
+        }     
         JOptionPane.showMessageDialog(null, "PURCHASE COMPLETE!!!");
         pick = JOptionPane.showInputDialog("NEXT CUSTOMER? \n Enter [1] if Yes and [2] if No: ");
         choose = Integer.parseInt(pick);

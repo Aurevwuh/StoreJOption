@@ -15,12 +15,12 @@ public class Kji {
  public static String again, pick, how_many, which, payment;
     public static int discount = 1, one, two;
     public static int choose, quantity = 1, x;
-    public static double total = 0, pay,change;
+    public static double total = 0, pay, change, kulang;
     public static float type;
 
     public static void GOODSHEESH() {
         JOptionPane.showMessageDialog(null, "OPENING STORE...");
-        
+
         JOptionPane.showMessageDialog(null, "WELCOME MAH BRO, CHECK OUT WHAT WE HAVE");
 
         JOptionPane.showMessageDialog(null, "{========================PROMOS========================} \n $ 10000 or more, get 1 set of paraphernalia tools \n $ 20000 or more, get 1 set of paraphernalia and 1 box of Flakka Drugs \n NOTE: You can only get Flakka Drugs when you avail on our promo \n *You can avail both promos at the same time*");
@@ -112,24 +112,19 @@ public class Kji {
 
         payment = JOptionPane.showInputDialog("TOTAL PRICE IS $ " + total + "\n" + "Enter Cash: ");
         x = Integer.parseInt(payment);
-        switch (x) {
 
-            case 1:
-                do {
-                 if (pay < total) {
-                        JOptionPane.showInputDialog("INSUFFICIENT CASH, PLEASE ENTER THE EXACT AMOUNT \n Enter Cash: ");
-                    }
-                } while (pay < total);
-                break;
-       
-        case 2:
-      if (pay >= total) {
-                    JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + change);
-                  change = pay - total;
-                  
-      }           
-            break;
-        }     
+        if (x < total) {
+            do {
+                which = JOptionPane.showInputDialog("INSUFFICIENT CASH, PLEASE ENTER THE EXACT AMOUNT \n Enter Cash: ");
+                x = Integer.parseInt(which);
+            } while (x < total);
+        }
+
+        if (x >= total) {
+            change = x - total;
+            JOptionPane.showMessageDialog(null, "TOTAL CHANGE IS $" + change);
+        }
+
         JOptionPane.showMessageDialog(null, "PURCHASE COMPLETE!!!");
         pick = JOptionPane.showInputDialog("NEXT CUSTOMER? \n Enter [1] if Yes and [2] if No: ");
         choose = Integer.parseInt(pick);
@@ -146,7 +141,7 @@ public class Kji {
                 break;
         }
     }
-    
+
     public static void main(String[] args) {
         GOODSHEESH();
         order();
